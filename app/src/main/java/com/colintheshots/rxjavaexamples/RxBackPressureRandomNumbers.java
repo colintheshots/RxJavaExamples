@@ -43,10 +43,10 @@ public class RxBackPressureRandomNumbers {
      * @param args
      */
     public static void main(String[] args) {
-        Observable.zip(rxGetRandomNumbers(100), rxGetNegativeRandomNumbers(100), new Func2<Integer, Integer, Integer>() {
+        Observable.zip(rxGetPositiveNumbers(100), rxGetNegativeNumbers(100), new Func2<Integer, Integer, Integer>() {
             @Override
             public Integer call(Integer integer, Integer integer2) {
-                return integer + integer2;
+                return integer - integer2;
             }
         })
             .filter(new Func1<Integer, Boolean>() {
@@ -74,28 +74,15 @@ public class RxBackPressureRandomNumbers {
      * @param numNumbers
      * @return
      */
-    private static Observable<Integer> rxGetRandomNumbers(final int numNumbers) {
+    private static Observable<Integer> rxGetPositiveNumbers(final int numNumbers) {
         return Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
             public void call(Subscriber<? super Integer> subscriber) {
                 for (int i = 0; i < numNumbers; i++) {
-                    Random rand = new Random();
-                    subscriber.onNext(rand.nextInt(10000) + 1);
+                    subscriber.onNext(i);
                 }
             }
-        })
-                .doOnNext(new Action1<Integer>() {
-                    @Override
-                    public void call(Integer integer) {
-                        try {
-                            Thread.sleep(integer % 300, 0);
-                        } catch (InterruptedException e) {
-                            // do nothing
-                        }
-                    }
-                })
-                .timeout(250, TimeUnit.MILLISECONDS)
-                .retry(1);
+        });
     }
 
     /**
@@ -103,13 +90,17 @@ public class RxBackPressureRandomNumbers {
      * @param numNumbers
      * @return
      */
-    private static Observable<Integer> rxGetNegativeRandomNumbers(final int numNumbers) {
+    private static Observable<Integer> rxGetNegativeNumbers(final int numNumbers) {
         return Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
             public void call(Subscriber<? super Integer> subscriber) {
                 for (int i = 0; i < numNumbers; i++) {
-                    Random rand = new Random();
-                    subscriber.onNext(rand.nextInt(10000) - 10000);
+//                    try {
+//                        Thread.sleep(250);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+                    subscriber.onNext(i * -1);
                 }
             }
         });

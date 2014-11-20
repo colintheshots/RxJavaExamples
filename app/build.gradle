@@ -21,5 +21,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'io.reactivex:rxjava:1.0.0-rc.6'
+    compile 'com.android.support:support-v4:21.0.+'
+    compile 'com.netflix.rxjava:rxjava-android:0.20.5'
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'com.google.guava:guava:17.+'
 }

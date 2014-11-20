@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RxJavaExamples</string>
+    <string name="msg_demo_doublebinding">Double binding (PublishSubject)</string>
 </resources>
