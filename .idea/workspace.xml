@@ -39,21 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <file leaf-file-name="RxPollingExample.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxPollingExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="750">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.27565083" vertical-offset="0" max-vertical-offset="653">
+              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RxBigIntegerFibonacci.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBigIntegerFibonacci.java">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6094946" vertical-offset="217" max-vertical-offset="870">
-              <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="750">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -887,11 +887,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_subject_debounce.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_log.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxDoubleBindingFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBackPressureRandomNumbers.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxPollingExample.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBigIntegerFibonacci.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBackPressureRandomNumbers.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxDoubleBindingFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxPollingExample.java" />
       </list>
     </option>
   </component>
@@ -1516,28 +1516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5244755" vertical-offset="0" max-vertical-offset="429">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxDoubleBindingFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52913755" vertical-offset="118" max-vertical-offset="1290">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBackPressureRandomNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1290">
-          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
@@ -1546,10 +1524,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxPollingExample.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBackPressureRandomNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6891271" vertical-offset="0" max-vertical-offset="765">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.7932619" vertical-offset="577" max-vertical-offset="1230">
+          <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBigIntegerFibonacci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12710567" vertical-offset="217" max-vertical-offset="870">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34456354" vertical-offset="0" max-vertical-offset="653">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxDoubleBindingFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63246554" vertical-offset="52" max-vertical-offset="1020">
+          <caret line="47" column="81" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
           <folding />
         </state>
       </provider>
@@ -1562,10 +1564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxBigIntegerFibonacci.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/colintheshots/rxjavaexamples/RxPollingExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6094946" vertical-offset="217" max-vertical-offset="870">
-          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.27565083" vertical-offset="0" max-vertical-offset="653">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
           <folding />
         </state>
       </provider>

@@ -45,12 +45,7 @@ public class RxDoubleBindingFragment
         ButterKnife.inject(this, layout);
 
         _resultEmitterSubject = PublishSubject.create();
-        _subscription = _resultEmitterSubject.asObservable().subscribe(new Action1<Float>() {
-            @Override
-            public void call(Float aFloat) {
-                _result.setText(String.valueOf(aFloat));
-            }
-        });
+        _subscription = _resultEmitterSubject.asObservable().subscribe(aFloat -> _result.setText(String.valueOf(aFloat)));
 
         onNumberChanged();
         _number2.requestFocus();

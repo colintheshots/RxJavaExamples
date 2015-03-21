@@ -43,30 +43,12 @@ public class RxBackPressureRandomNumbers {
      * @param args
      */
     public static void main(String[] args) {
-        Observable.zip(rxGetPositiveNumbers(100), rxGetNegativeNumbers(100), new Func2<Integer, Integer, Integer>() {
-            @Override
-            public Integer call(Integer integer, Integer integer2) {
-                return integer - integer2;
-            }
-        })
-            .filter(new Func1<Integer, Boolean>() {
-                @Override
-                public Boolean call(Integer integer) {
-                    return integer > -1000 && integer < 1000;
-                }
-            })
-            .subscribe(new Action1<Integer>() {
-                @Override
-                public void call(Integer integer) {
-                    System.out.print(integer);
-                    System.out.print("\n");
-                }
-            }, new Action1<Throwable>() {
-                @Override
-                public void call(Throwable throwable) {
-                    throwable.printStackTrace();
-                }
-            });
+        Observable.zip(rxGetPositiveNumbers(100), rxGetNegativeNumbers(100), (integer, integer2) -> integer - integer2)
+            .filter(integer -> integer > -1000 && integer < 1000)
+            .subscribe(integer -> {
+                System.out.print(integer);
+                System.out.print("\n");
+            }, Throwable::printStackTrace);
     }
 
     /**
@@ -75,12 +57,9 @@ public class RxBackPressureRandomNumbers {
      * @return
      */
     private static Observable<Integer> rxGetPositiveNumbers(final int numNumbers) {
-        return Observable.create(new Observable.OnSubscribe<Integer>() {
-            @Override
-            public void call(Subscriber<? super Integer> subscriber) {
-                for (int i = 0; i < numNumbers; i++) {
-                    subscriber.onNext(i);
-                }
+        return Observable.create((Subscriber<? super Integer> subscriber) -> {
+            for (int i = 0; i < numNumbers; i++) {
+                subscriber.onNext(i);
             }
         });
     }
@@ -91,17 +70,14 @@ public class RxBackPressureRandomNumbers {
      * @return
      */
     private static Observable<Integer> rxGetNegativeNumbers(final int numNumbers) {
-        return Observable.create(new Observable.OnSubscribe<Integer>() {
-            @Override
-            public void call(Subscriber<? super Integer> subscriber) {
-                for (int i = 0; i < numNumbers; i++) {
+        return Observable.create((Subscriber<? super Integer> subscriber) -> {
+            for (int i = 0; i < numNumbers; i++) {
 //                    try {
 //                        Thread.sleep(250);
 //                    } catch (InterruptedException e) {
 //                        e.printStackTrace();
 //                    }
-                    subscriber.onNext(i * -1);
-                }
+                subscriber.onNext(i * -1);
             }
         });
     }
