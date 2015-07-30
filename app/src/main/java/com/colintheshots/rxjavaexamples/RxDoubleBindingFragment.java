@@ -1,5 +1,7 @@
 package com.colintheshots.rxjavaexamples;
 
+import com.google.common.base.Strings;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,13 +11,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.common.base.Strings;
-
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnTextChanged;
 import rx.Subscription;
-import rx.functions.Action1;
 import rx.subjects.PublishSubject;
 
 /**
@@ -30,9 +29,9 @@ import rx.subjects.PublishSubject;
 public class RxDoubleBindingFragment
         extends Fragment {
 
-    @InjectView(R.id.double_binding_num1) EditText _number1;
-    @InjectView(R.id.double_binding_num2) EditText _number2;
-    @InjectView(R.id.double_binding_result) TextView _result;
+    @Bind(R.id.double_binding_num1) EditText _number1;
+    @Bind(R.id.double_binding_num2) EditText _number2;
+    @Bind(R.id.double_binding_result) TextView _result;
 
     Subscription _subscription;
     PublishSubject<Float> _resultEmitterSubject;
@@ -42,7 +41,7 @@ public class RxDoubleBindingFragment
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_double_binding_textview, container, false);
-        ButterKnife.inject(this, layout);
+        ButterKnife.bind(this, layout);
 
         _resultEmitterSubject = PublishSubject.create();
         _subscription = _resultEmitterSubject.asObservable().subscribe(aFloat -> _result.setText(String.valueOf(aFloat)));
